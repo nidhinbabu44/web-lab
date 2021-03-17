@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    document.write("Hello World!");
+	function geek()
+	{ 
+		var name=document.getElementById("fname");
+		var address=document.getElementById("address");
+		var sub=document.getElementById("SUBJECT");
+		var radios=document.getElementByName("yesno");
+		var.formvalid=false;
+		if(name.value==""|| name.value==null)
+		{
+			window.alert("enter valid data");
+			return false;
+		}
+		if(address.value=="')
+		{
+			window.alert("enter valid address");
+			return false;
+		}
+		var i=0;
+		while(!formvalid &&i<radios.length)
+		{
+			if(radios[i].checked)formvalid=true;
+			i++;
+		}
+		if(!formvalid)alert("please enter your gender");
+		return formvalid;
+		return true;
+		
+	}
+	
+</script>
+</head>
+<body>
+	<form name="stud" onsubmit="return geek()">
+	<h2>REGISTRATION FORM</h2><BR>
+	Name:&nbsp;&nbsp;&nbsp;
+	<input type="text" name="name" id="fname"><br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	Address<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<textarea name="address" type="text" rows="5" cols="20" id="address"></textarea><br><br>
+	Gender:
+	<input type="radio" id="1" name="yesno" value="1"/>male
+	<input type="radio" id="1" name="yesno" value="2"/>Female <br><br>
+	Qualification:<select name="subject" id="SUBJECT">
+	<option value="s">MCA</option>
+	<option value="s">BCA</option>
+	<option value="s">MBA</option>
+	<option value="s">BBA</option>
+	<option value="s">BTECH</option>
+	<option value="s">MTECH</option>
+        </select></BR>
+        <button onclick="geek()">Click me</button>
+
+
+
+
+	</form>
+</body>
+</html>

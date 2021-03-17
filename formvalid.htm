@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html>
+<script>
+function geek()
+{
+	var name=document.getElementById("fname");
+	var address=document.getElementById("address");
+	var sub=document.getElementById("subject");
+	var radios=document.getElementById("1");
+	var formValid=false;
+	if(name.value==""||name.value==null)
+	{
+		window.alert("enter valid name");
+		return false;
+	}
+		if(address.value==""||address.value==null)
+	{
+		window.alert("enter valid address");
+		return false;
+	}
+		
+/*if(sub.selectedIndex=="")
+		{
+			window.alert("enter valid subject");
+			return false;
+		} */
+		var i=0;
+		radios.length=2;
+		while(!formValid && i<radios.length)
+		{
+			
+			if(radios[i].checked)
+			formValid=true;
+			i++;
+			
+		}
+		if(!formValid)
+		alert("please enter your gender");
+		return formValid;
+		
+		return true;
+		
+}
+</script>
+		
+
+<title>Untitled Document</title>
+
+<body>
+<form name="stud" onSubmit="return geek()">
+<h2>REGISTRATION FORM</h2><br>
+Name:&nbsp;<input type="text" name="name" id="fname"><br><br>
+Address<br>:&nbsp;<textarea name="address" type="text" rows="5"
+cols="20" id="address">
+</textarea><br><br>
+Gender:<input type="radio" id="1" name="yesno"
+>Male
+<input type="radio" id="1" name="yesno" >Female<br><br>
+Qualification:<select name="subject" id="subject">
+<option value="s">MCA</option>
+<option value="s">BCA</option>
+<option value="s">MBA</option>
+<option value="s">BBA</option>
+<option value="s">BTECH</option>
+<option value="s">MTECH</option>
+</select><br><br>
+<input type="submit" value="confirm">
+</form>
+</body>
+</html>
